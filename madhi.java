@@ -1,0 +1,4 @@
+class madhu
+{
+	void main( )
+}
