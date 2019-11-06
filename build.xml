@@ -1,0 +1,19 @@
+<project name="sample" default="run">
+  <target name="clear">
+   <delete dir="build"/> 
+  </target>
+    <target name="compile" depends="clear">
+    <mkdir dir="build/class"/>
+    <javac srcdir="src" destdir="build/class"/>
+   </target>
+   <target name="package" depends="compile">
+     <jar basedir="build/class" destfile="build/jar/sample.jar">
+        <manifest>
+         <attribute name="Main-class" value="sample"/>
+		</manifest>
+     </jar>		 
+   </target>
+  <target name="run" depends="package">
+      <java jar="build/jar/sample.jar" fork='true'/>
+  </target> 
+</project>    
