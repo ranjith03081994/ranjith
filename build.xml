@@ -9,7 +9,7 @@
    <target name="package" depends="compile">
      <jar basedir="build/class" destfile="build/jar/sample.jar">
         <manifest>
-         <attribute name="Main-class" value="sample"/>
+         <attribute name="Main-class" value="Sample1"/>
 		</manifest>
      </jar>		 
    </target>
